@@ -1,0 +1,404 @@
+
+@font-face {
+    font-family: DDIN;
+    src: url(D-DIN.otf);
+}
+
+@font-face {
+    font-family: icons;
+    src: url(heydings_icons.ttf);
+}
+
+body {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: DDIN;
+}
+
+#main-content{
+	height: 100%;
+	width: 86%;
+	position: fixed;
+	margin-left: 7%; /* Same as the width of a sidebar */
+	margin-right: 7%; /* Same as the width of a sidebar */
+	background-image: linear-gradient( #3d857b, #ffcccc );
+
+}
+
+#location-container{
+	position: absolute;
+	top: 0;
+	height: 4%;
+	text-align: center;
+	background-color: white;
+	margin: 0px;
+	width: 100%;
+	border-radius: 20px 20px 0px 0px;
+}
+
+#location-container p{
+	margin-top: 5px;
+}
+
+#type-container{
+	position: absolute;
+	bottom: 0;
+	height: 4%;
+	text-align: center;
+	background-color: white;
+	margin: 0px;
+	width: 100%;
+	border-radius: 0px 0px 20px 20px;
+}
+
+#type-container p{
+	margin-top: 5px;
+}
+
+#image-container{
+	background-color: #c8f7cf;
+	border-radius: 20px 20px 20px 20px;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#central-image{
+	max-width: 75%;
+	max-height: 85%;
+	min-width: 50%;
+	min-height: 50%;
+	display: block;
+}
+
+#central-text{
+	margin-top: 10px;
+	margin-right: 200px;
+	margin-left: 200px;
+	display: block;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+.sidebar{
+	height: 100%;
+	width: 7%; /* Same as a side margin of the main content */
+	top: 0;
+	position: fixed;
+	z-index: 1;
+	background-image: linear-gradient( #3d857b, #ffcccc );
+	background-size: cover;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+}
+
+#left-sidebar{
+	left: 0;
+	align-items: flex-start;
+}
+
+#right-sidebar{
+	right: 0;
+	align-items: flex-end;
+}
+
+.sidebar-button{
+	background-color: rgba(1, 75, 132, 0.4);
+	width: 90%;
+	height: 100px;
+	border: none;
+	color: #49fcb4;
+	text-shadow: .08vw .07vw black;
+}
+
+.sidebar-button:active {
+  	padding: 0px;
+}
+
+.sidebar-button:focus {
+	outline: none;
+	text-shadow: .08vw .07vw white;
+}
+
+#a-button, #b-button{
+	border-radius: 0px 5px 5px 0px;
+	transform: translate(-5%,0%);
+	transition: transform .25s ease;
+	z-index: 3;
+}
+
+#c-button, #d-button{
+	border-radius: 5px 0px 0px 5px;
+	transform: translate(5%,0%);
+	transition: transform .25s ease;
+	z-index: 3;
+}
+
+#left-flex-carrier{
+	border: 1px solid blue;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	height: 100%;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	transform: translate(-100%,0%);
+}
+
+#right-flex-carrier{
+	border: 1px solid blue;
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: flex;
+	height: 100%;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	transform: translate(100%,0%);
+}
+
+#a-hidebar{
+	background-color: rgb(148, 168, 255);
+	width: 969px;
+	height: 300px;
+	border-radius: 0px 30px 30px 0px;
+	transform: translate(0%,0%);
+	transition: transform .25s ease;
+}
+
+#b-hidebar{
+	background-color: rgb(148, 168, 255);
+	width: 969px;
+	height: 300px;
+	border-radius: 0px 30px 30px 0px;
+	transform: translate(0%,0%);
+	transition: transform .25s ease;
+}
+
+#c-hidebar{
+	background-color: rgb(148, 168, 255);
+	width: 969px;
+	height: 300px;
+	border-radius: 30px 0px 0px 30px;
+	transform: translate(0%,0%);
+	transition: transform .25s ease;
+}
+
+#d-hidebar{
+	background-color: rgb(148, 168, 255);
+	width: 969px;
+	height: 300px;
+	border-radius: 30px 0px 0px 30px;
+	transform: translate(0%,0%);
+	transition: transform .25s ease;
+}
+
+.icon-text{
+	font-family: icons;
+	font-size: 20px;
+}
+
+.button-text{
+	font-family: DDIN;
+	font-size: 16px;
+}
+
+#left-arrow{
+	background-color: white;
+	position: fixed;
+	left: 3%; 
+	width: 4%;
+	height: 600px;
+	border-radius: 20px 0px 0px 20px;
+	transition: background-color .25s ease;
+}
+
+#right-arrow{
+	background-color: white;
+	position: fixed;
+	right: 3%; 
+	width: 4%;
+	height: 600px;
+	border-radius: 0px 20px 20px 0px;
+	transition: background-color .25s ease;
+}
+
+#reshare-label{
+	background-color: white;
+	position: fixed;
+	right: 7%;
+	width: 10%;
+	height: 30px;
+	border-radius: 5px 0px 0px 0px;
+	text-align: center;
+}
+
+#reshare-label p{
+	margin: 0px;
+	padding: 0px;
+}
+
+#reshare-id{
+	background-image: linear-gradient(#49b85a, rgba(50, 168, 82,0.5));
+	position: fixed;
+	right: 7%;
+	width: 10%;
+	height: 210px;
+	border-radius: 5px 0px 0px 5px;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+#reshare-icon{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	z-index: 4;
+	border-radius: 5px;
+
+}
+
+#reshare-banner{
+	width: 100%;
+	height: 55px;
+	position: absolute;
+	top: 20px;
+	z-index: 3;
+
+}
+
+#reshare-handle{
+	margin-top: 90px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+}
+
+#reshare-display{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 0;
+	padding-top: 0;
+	color: white;
+}
+
+#poster-label{
+	background-color: white;
+	position: fixed;
+	left: 7%;
+	width: 10%;
+	height: 30px;
+	border-radius: 0px 5px 0px 0px;
+	text-align: center;
+}
+
+#poster-label p{
+	margin: 0px;
+	padding: 0px;
+}
+
+#poster-id{
+	background-image: linear-gradient(#49b85a, rgba(50, 168, 82,0.5));
+	position: fixed;
+	left: 7%;
+	width: 10%;
+	height: 200px;
+	border-radius: 0px 5px 5px 0px;
+	word-wrap: break-word;
+	overflow: auto;
+}
+
+#poster-icon{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 10px;
+	top: 40px;
+	z-index: 4;
+	border-radius: 5px;
+
+}
+
+#poster-banner{
+	width: 100%;
+	height: 55px;
+	position: absolute;
+	top: 20px;
+	z-index: 3;
+
+}
+
+#poster-handle{
+	margin-top: 90px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+}
+
+#poster-display{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: white;
+}
+
+#poster-date{
+	position: absolute;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 0;
+	margin-bottom: 0;
+	bottom: 10px;
+	font-size: 13px;
+	color: black;
+}
+
+#timerClock{
+	color: white;
+	font-size: 20px;
+	padding: 5px;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	position: fixed;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  .button-text {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .button-text {
+    visibility: visible;
+  }
+
+  .sidebar{
+  	justify-content: space-between;
+  }
+
+  .sidebar-button{
+  	height: 10%;
+  	width: 750%;
+  }
+
+  .icon-text{
+  	display: inline;
+  }
+
+  .button-text{
+  	display: inline;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<title>Client</title>
+</head>
+<body onload="init();">
+
+	<div id="left-sidebar" class="sidebar">
+		<button href="#" id="a-button" class="sidebar-button" onclick="openHidebar1()"><p class="icon-text">A</p><p class="button-text">Account</p></button>
+		<div id="left-arrow"></div>
+		<div id="poster-id">
+			<div id="poster-label"><p>Original Poster</p></div>
+			<img id="poster-icon" src="objects/1/icon1.jpg">
+			<img id="poster-banner" src="objects/1/banner1.jpg">
+			<p id="poster-handle">@middaywaves</p>
+			<p id="poster-display">Jay </p>
+			<p id="poster-date">Posted 23 December 2021</p>
+		</div>
+		<button href="#" id="b-button" class="sidebar-button" onclick="openHidebar2()"><p class="icon-text">Y</p><p class="button-text">Post</p></button>
+		<div id="left-flex-carrier">
+			<div id="a-hidebar"></div>
+			<div id="b-hidebar"></div>
+		</div>
+	</div>
+
+	<div id="main-content">
+
+		<div id="image-container">
+			<div id="location-container"><p>Aggregated Timeline</p></div>
+			<img id="central-image" src="objects/1/photo.jpg">
+			<div id="central-text">Mushroom loves this chair for some reason</div>
+			<div id="type-container"><p>Image(1/1) - Text</p></div>
+		</div>
+	</div>
+
+	<div id="right-sidebar" class="sidebar">
+		<div id="timerClock">0:0:00</div>
+		<button href="#" id="c-button"class="sidebar-button" onclick="openHidebar3()"><p class="icon-text">M</p><p class="button-text">Tags</p></button>
+		<div id="right-arrow"></div>
+		<div id="reshare-id">
+			<div id="reshare-label"><p>Reshare</p></div>
+			<img id="reshare-icon" src="objects/1/icon2.png">
+			<img id="reshare-banner" src="objects/1/banner2.jpg">
+			<p id="reshare-handle">@fishguy</p>
+			<p id="reshare-display">check my pinned for awesome fish</p>
+		</div>
+		<button href="#" id="d-button"class="sidebar-button" onclick="openHidebar4()"><p class="icon-text">C</p><p class="button-text">Settings</p></button>
+		<div id="right-flex-carrier">
+			<div id="c-hidebar"></div>
+			<div id="d-hidebar"></div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
